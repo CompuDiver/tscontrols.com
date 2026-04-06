@@ -153,13 +153,30 @@ function initContactForm() {
     submitBtn.textContent = 'Sending...';
     status.textContent = '';
 
-    // Simulate async send (replace with fetch() to Formspree/Netlify/etc. in production)
-    setTimeout(() => {
-      status.textContent = "Message received. We'll be in touch shortly.";
-      status.className = 'form-status success';
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
-    }, 900);
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbz6d0fl4qjGe6TYAAmwHKk0u93nvzbzb6ofcpHRkoDW48B9SvoIwebtK0YMOFE6LkmX9w/exec';
+
+    fetch(scriptUrl, {
+      method: 'POST',
+      body: JSON.stringify({
+        name:    form.querySelector('#name').value.trim(),
+        email:   form.querySelector('#email').value.trim(),
+        company: form.querySelector('#company').value.trim(),
+        message: form.querySelector('#message').value.trim(),
+      }),
+    })
+      .then(res => res.json())
+      .then(() => {
+        status.textContent = "Message received. We'll be in touch shortly.";
+        status.className = 'form-status success';
+        form.reset();
+      })
+      .catch(() => {
+        status.textContent = 'Something went wrong. Please email us directly at thomas@tscontrols.com.';
+        status.className = 'form-status error';
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      });
   });
 }
