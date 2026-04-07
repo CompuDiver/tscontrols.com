@@ -4,7 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TS Controls — Outsourced control system programming and service support for AV integrators. AMX, Crestron, Q-SYS, and Biamp. On-site and remote service calls.">
-  <title>TS Controls | Control System Integration</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tscontrols.com/">
+  <title>TS Controls | Control System Integration — AMX, Crestron, Q-SYS Programming</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TS Controls | Control System Integration">
+  <meta property="og:description" content="Outsourced control system programming and service support for AV integrators. AMX, Crestron, Q-SYS, and Biamp.">
+  <meta property="og:url" content="https://tscontrols.com/">
+  <meta property="og:image" content="https://tscontrols.com/assets/logos/TSControls Logo NoBG Rev5.png">
+  <meta property="og:site_name" content="TS Controls">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TS Controls | Control System Integration">
+  <meta name="twitter:description" content="Outsourced control system programming and service support for AV integrators. AMX, Crestron, Q-SYS, and Biamp.">
+  <meta name="twitter:image" content="https://tscontrols.com/assets/logos/TSControls Logo NoBG Rev5.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -64,7 +80,7 @@
           alt="TS Controls"
           width="480"
         >
-        <p class="hero-tagline">Your AV Programming Partner<span></span></p>
+        <h1 class="hero-tagline">Your AV Programming Partner<span></span></h1>
         <p class="hero-description">
           Outsourced control system programming and service support for AV integrators.
           AMX, Crestron, Q-SYS, and Biamp - programmed the way your customer needs it,
@@ -320,6 +336,11 @@
 
           <!-- Contact Form -->
           <form class="contact-form" id="contactForm" novalidate>
+            <!-- Honeypot — hidden from real users, catches bots -->
+            <div style="position:absolute;left:-9999px" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name <span aria-hidden="true">*</span></label>
@@ -393,6 +414,37 @@
       </nav>
     </div>
   </footer>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "TS Controls",
+    "description": "Outsourced control system programming and service support for AV integrators. AMX, Crestron, Q-SYS, and Biamp.",
+    "url": "https://tscontrols.com",
+    "telephone": "+19712535299",
+    "email": "thomas@tscontrols.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hillsboro",
+      "addressRegion": "OR",
+      "addressCountry": "US"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Thomas Shaw"
+    },
+    "areaServed": "United States",
+    "serviceType": [
+      "Control System Programming",
+      "Touch Panel UI Design",
+      "AV System Service",
+      "Remote AV Support"
+    ],
+    "knowsAbout": ["AMX", "Crestron", "Q-SYS", "Biamp"]
+  }
+  </script>
 
   <script src="js/main.js"></script>
 </body>

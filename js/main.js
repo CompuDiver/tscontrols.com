@@ -121,6 +121,15 @@ function initContactForm() {
     status.textContent = '';
     status.className = 'form-status';
 
+    // Honeypot check — if filled, silently reject (it's a bot)
+    const honeypot = form.querySelector('#website');
+    if (honeypot && honeypot.value) {
+      status.textContent = "Message received. We'll be in touch shortly.";
+      status.className = 'form-status success';
+      form.reset();
+      return;
+    }
+
     // Validate required fields
     const required = form.querySelectorAll('[required]');
     let valid = true;
