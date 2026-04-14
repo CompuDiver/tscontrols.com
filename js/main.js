@@ -162,7 +162,7 @@ function initContactForm() {
     submitBtn.textContent = 'Sending...';
     status.textContent = '';
 
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbz6d0fl4qjGe6TYAAmwHKk0u93nvzbzb6ofcpHRkoDW48B9SvoIwebtK0YMOFE6LkmX9w/exec';
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbw1fPpjxWUZTaaGYBcjuoYpp_7twqbrl1yjsBnBksyzyGkjpO5_jYS9aDAidyFwck_ogA/exec';
 
     fetch(scriptUrl, {
       method: 'POST',
