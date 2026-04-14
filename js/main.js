@@ -180,7 +180,7 @@ function initContactForm() {
         form.reset();
       })
       .catch(() => {
-        status.textContent = 'Something went wrong. Please email us directly at thomas@tscontrols.com.';
+        status.textContent = 'Something went wrong. Please email us directly at info@tscontrols.com.';
         status.className = 'form-status error';
       })
       .finally(() => {
